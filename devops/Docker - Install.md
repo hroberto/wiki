@@ -3,7 +3,7 @@
 
 ## 1. Instalando o Docker
 
-```sh
+```bash
 # instalando prerequisito
 sudo apt-get install -y  apt-transport-https ca-certificates curl gnupg lsb-release
 
@@ -32,11 +32,13 @@ sudo /etc/init.d/docker  start
 
 ## 2. Habilitacao da rede
 
-# /etc/docker/daemon.json
+> /etc/docker/daemon.json
+```json
 {
     "bip": "192.168.199.1/28",
     "dns": ["8.8.8.8", "8.8.4.4"]
 }
+```
 
 
 ## 3. Limpando configurações nao utilizadas
