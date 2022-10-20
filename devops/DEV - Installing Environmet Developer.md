@@ -1,16 +1,8 @@
 # Installing Environment Developer
 
-<details><summary>1. Subindo ambiente Linux (docker)</summary><p>
-
-```sh
-## maquina LINUX - Ubuntu 
-docker run -ti --rm -v $PWD:/project -w /project ubuntu:latest  /bin/bash
-```
 
 
-
-</p></details>
-<details><summary>2. Instalando compilador e outras ferramentas</summary><p>
+<details><summary>1. Instalando compilador e outras ferramentas</summary><p>
 
 ```sh
 # atualizando repositorio
@@ -26,7 +18,7 @@ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-10 10
 
 
 </p></details>
-<details><summary>3. Instalando o Boost Manualmente</summary><p>
+<details><summary>2. Instalando o Boost Manualmente</summary><p>
 
 ```sh
 mkdir -p ~/lib-external
@@ -52,7 +44,7 @@ popd
 
 
 </p></details>
-<details><summary>4. Preparando bibliotera do Redis CPP</summary><p>
+<details><summary>3. Preparando bibliotera do Redis CPP</summary><p>
 
 
 ```sh
@@ -84,7 +76,7 @@ popd
 
 
 </p></details>
-<details><summary>5. Instalando a Biblioteca ZLIB</summary><p>
+<details><summary>4. Instalando a Biblioteca ZLIB</summary><p>
 
 
 ```bash
@@ -103,7 +95,7 @@ sudo make install
 
 
 </p></details>
-<details><summary>6. Instalando o Google ProtoBuf</summary><p>
+<details><summary>5. Instalando o Google ProtoBuf</summary><p>
 
 
 ```bash
@@ -133,7 +125,7 @@ popd
 
 
 </p></details>
-<details><summary>7. Compilacao e Instalacao do QuickFix</summary><p>
+<details><summary>6. Compilacao e Instalacao do QuickFix</summary><p>
 
 
 - Instruções:
