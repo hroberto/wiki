@@ -51,7 +51,6 @@ popd
 
 
 ## 4. Configure FreeTDS
-===========================
 
 * Edit the `/usr/local/etc/freetds.conf` file to add servers.
 * Test the connection with `/usr/local/bin/tsql`
@@ -59,13 +58,13 @@ popd
 
 > sudo vim /usr/local/etc/freetds.conf
 
-´´´ini
+```ini
 [DevServerSQLServer]
         host = xx.xx.xx.xx
         port = 1433
         tds version = 7.3
         database myDatabase
-´´´
+```
 
 ```bash
 /usr/local/bin/tsql  -S DevServerSQLServer -U myuser  -P myPassword
@@ -73,16 +72,18 @@ popd
 
 
 > sudo vi /usr/local/etc/odbcinst.ini
-´´´ini
+
+```ini
 [FreeTDS]
 Description     = v0.63 with protocol v8.0
 Driver          = /usr/local/lib/libtdsodbc.so
 # /usr/local/freetds/lib/libtdsodbc.so
-´´´
+```
 
 
 > sudo vim /usr/local/etc/odbc.ini
-´´´ini
+
+```ini
 [MSSQLDev]
 # Driver      = FreeTDS
 Driver      = /usr/local/lib/libtdsodbc.so
@@ -92,7 +93,7 @@ TDS_Version = 8.0
 Server      = xx.xx.xx.xx
 Port        = 1433
 Database    = myDatabase
-´´´
+```
 
 ```bash
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib/
