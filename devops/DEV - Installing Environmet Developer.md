@@ -10,10 +10,13 @@ sudo apt update
 
 # instalando ferramentas
 sudo apt install -y build-essential g++-10 cmake git \
-libboost-all-dev libspdlog-dev  libhiredis-dev  libssl-dev  libfmt-dev
+  apt-transport-https ca-certificates curl gnupg lsb-release \
+  autoconf automake libtool curl make unzip xz \
+  libboost-all-dev libspdlog-dev  libhiredis-dev  libssl-dev  libfmt-dev
 
 # alterando o compilador default
 sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-10 10
+  
 ```
 
 
