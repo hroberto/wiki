@@ -16,6 +16,9 @@ sudo apt install -y build-essential g++-10 cmake git \
 
 # alterando o compilador default
 sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-10 10
+
+# export GIT_SSL_NO_VERIFY=1
+git config --global http.sslverify false
   
 ```
 
