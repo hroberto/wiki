@@ -11,7 +11,7 @@ sudo apt update
 # instalando ferramentas
 sudo apt install -y build-essential g++-10 cmake git \
   apt-transport-https ca-certificates curl gnupg lsb-release \
-  autoconf automake libtool curl make unzip xz \
+  autoconf automake libtool curl make unzip xz-utils \
   libboost-all-dev libspdlog-dev  libhiredis-dev  libssl-dev  libfmt-dev
 
 # alterando o compilador default
