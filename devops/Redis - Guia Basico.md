@@ -7,9 +7,11 @@
 ## 1.1. Configuração o WSL
 
 ```bash
-wsl -s -v
+wsl --list --verbose
     NAME            STATE           VERSION
     * Ubuntu-20.04    Running         1
+    
+wsl --shutdown
 
 wsl --set-version  Ubuntu-20.04  2
     Conversão em andamento. Isso pode levar alguns minutos...
