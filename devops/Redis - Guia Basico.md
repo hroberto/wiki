@@ -15,7 +15,7 @@ wsl --set-version  Ubuntu-20.04  2
     Conversão em andamento. Isso pode levar alguns minutos...
     Para obter informações sobre as principais diferenças em relação ao WSL 2, visite https://aka.ms/wsl2
 
- wsl -l -v
+ wsl --list --verbose
   NAME            STATE           VERSION
 * Ubuntu-20.04    Stopped         2
 
