@@ -159,3 +159,58 @@ make -j8
 
 sudo make install
 ```
+
+</p></details>
+<details><summary>7. Configurando o WSL</summary><p>
+
+- Atualizando versao WSL 2
+
+```powershell
+wsl.exe --list --verbose
+    NAME            STATE           VERSION
+    * Ubuntu-22.04    Running         1
+
+wsl.exe --shutdown
+wsl.exe --update
+
+wsl.exe --set-version  Ubuntu-22.04  2
+    Conversão em andamento. Isso pode levar alguns minutos...
+    Para obter informações sobre as principais diferenças em relação ao WSL 2, visite https://aka.ms/wsl2
+
+wsl.exe --list --verbose
+  NAME            STATE           VERSION
+* Ubuntu-22.04    Stopped         2
+
+```
+
+- Recriando uma distribuição no WSL
+
+```powershell
+wsl --list --verbose
+#   NAME            STATE           VERSION
+# * Ubuntu-22.04    Running         2
+
+wsl --unregister  Ubuntu-22.04
+# Cancelando.
+# A operação foi concluída com êxito.
+
+wsl --install -d Ubuntu-22.04
+# Ubuntu 22.04 LTS já está instalado.
+# Iniciando Ubuntu 22.04 LTS...
+# Installing, this may take a few minutes...
+
+```
+
+- Atualizando pacotes básicos para Ubuntu
+
+```sh
+# atualizando repositorio
+sudo apt update
+
+# instalando ferramentas
+sudo apt install -y build-essential \
+    git libssl-dev  libtool curl unzip \
+    apt-transport-https ca-certificates gnupg lsb-release
+```
+
+</p></details>
